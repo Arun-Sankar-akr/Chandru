@@ -33,6 +33,10 @@ export default function Hero({ open }) {
         </div>
         <p className="date shine hz" style={{ "--d": "2.6s" }}>{wedding.dateText}</p>
         <p className="sub hz" style={{ "--d": "2.85s" }}>request the pleasure of your presence at their wedding</p>
+        <a className="cue hz" style={{ "--d": "3.2s" }} href="#couple" aria-label="Scroll to the invitation">
+          <span>Scroll</span>
+          <i />
+        </a>
       </section>
     </div>
   );

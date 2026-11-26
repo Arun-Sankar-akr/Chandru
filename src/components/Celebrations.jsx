@@ -3,17 +3,26 @@ import { wedding } from "../config.js";
 
 export default function Celebrations() {
   return (
-    <section>
-      <Reveal variant="zoom">
-        <p className="lbl">Save the date</p>
+    <section id="schedule">
+      <Reveal>
+        <p className="lbl">{wedding.longDate}</p>
         <h2>Wedding Celebrations</h2>
-        <div className="card">
-          <p className="ta">முகூர்த்தம்</p>
-          <h3>Muhurtham</h3>
-          <p>{wedding.longDate}</p>
-          <p className="sub">{wedding.time}</p>
-        </div>
+        <p className="sub">The day, from the first blessing to the last goodbye.</p>
       </Reveal>
+      <ol className="tl">
+        {wedding.events.map((e, i) => (
+          <li key={e.name}>
+            <Reveal variant={i % 2 ? "right" : "left"}>
+              <div className="card tl-card">
+                <p className="ta">{e.ta}</p>
+                <h3>{e.name}</h3>
+                <p className="sub">{e.note}</p>
+                <p className="tl-time">{e.time || "Time to be announced"}</p>
+              </div>
+            </Reveal>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }

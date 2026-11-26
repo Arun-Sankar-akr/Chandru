@@ -3,7 +3,7 @@ import { wedding } from "../config.js";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="foot">
       <Reveal>
         <p className="ta">வாழ்க வளமுடன்</p>
         <div className="script">

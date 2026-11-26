@@ -40,7 +40,7 @@ function downloadIcs() {
 export default function SaveTheDate() {
   const cells = [...Array(firstDow).fill(null), ...Array.from({ length: daysInMonth }, (_, i) => i + 1)];
   return (
-    <section>
+    <section id="date">
       <Reveal variant="zoom">
         <p className="lbl">Circle it in your calendar</p>
         <h2>Mark the Day</h2>

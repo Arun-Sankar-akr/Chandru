@@ -7,7 +7,7 @@ import { wedding } from "../config.js";
 export default function Venue() {
   const wide = useWide();
   return (
-    <section>
+    <section id="venue">
       <Reveal variant="zoom">
         <p className="lbl">Where we say “I do”</p>
         <h2>Our Venue</h2>

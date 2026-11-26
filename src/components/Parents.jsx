@@ -15,7 +15,7 @@ function ParentsCard({ title, names, child }) {
 
 export default function Parents() {
   return (
-    <section>
+    <section id="parents">
       <Reveal>
         <p className="lbl">With the blessings of our elders</p>
         <h2>Our Beloved Parents</h2>

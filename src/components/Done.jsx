@@ -1,13 +1,16 @@
-// Small credit bar shown at the very bottom of the page.
+// Small credit bar at the very bottom. The whole phrase "Crafted with ASR" is one link.
 export default function Done() {
   return (
     <div className="cont">
-      <p>
-        Crafted with{" "}
-        <a href="https://arunakr.vercel.app" target="_blank" rel="noreferrer">
-          ASR
-        </a>
-      </p>
+      <a
+        className="credit"
+        href="https://arunakr.vercel.app"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Crafted with ASR, opens arunakr.vercel.app"
+      >
+       Crafted with <span>ASR</span>
+      </a>
     </div>
   );
 }

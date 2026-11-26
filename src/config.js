@@ -13,6 +13,12 @@ export const wedding = {
   groomParents: ["Sivalingam", "Anitha"],
   // TODO: replace with the real names of the bride's parents
   brideParents: ["Father Name", "Mother Name"],
+  // Day-wise programme. Add or remove items; leave `time` empty to show "To be announced".
+  events: [
+    { ta: "முகூர்த்தம்", name: "Muhurtham", note: "The sacred wedding ceremony", time: "" },
+    { ta: "விருந்து", name: "Wedding Feast", note: "Lunch with family and friends", time: "" },
+    { ta: "ஆசீர்வாதம்", name: "Blessings & Photographs", note: "Meet the couple and bless them", time: "" },
+  ],
   venue: {
     name: "Venue details will be shared soon.",
     mapUrl: "", // paste a Google Maps link later to show a "View on map" button
