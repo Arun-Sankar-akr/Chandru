@@ -44,7 +44,7 @@ export default function SaveTheDate() {
       <Reveal variant="zoom">
         <p className="lbl">Circle it in your calendar</p>
         <h2>Mark the Day</h2>
-        <div className="card cal">
+        <div className="card cal tilt">
           <p className="cal-month">
             {MONTHS[M - 1]} {Y}
           </p>

@@ -4,12 +4,12 @@ export default function Done() {
     <div className="cont">
       <a
         className="credit"
-        href="https://arunakr.vercel.app"
+        href="https://arunakr.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Crafted with ASR, opens arunakr.vercel.app"
+        aria-label="Crafted with ASR, opens arunakr.vercel.app/"
       >
-       Crafted with <span>ASR</span>
+        Crafted with <span>ASR</span>
       </a>
     </div>
   );

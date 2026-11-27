@@ -3,7 +3,7 @@ import { wedding } from "../config.js";
 
 function ParentsCard({ title, names, child }) {
   return (
-    <div className="card">
+    <div className="card tilt">
       <p className="lbl">{title}</p>
       <div className="names">{names[0]}</div>
       <p className="sub">&amp;</p>

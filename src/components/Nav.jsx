@@ -15,7 +15,7 @@ export default function Nav({ open }) {
   useEffect(() => {
     if (!open) return;
     const onScroll = () => {
-      setShow(window.scrollY > window.innerHeight * 0.6);
+      setShow(window.scrollY > window.innerHeight * 0.6 && document.documentElement.scrollHeight - window.scrollY - window.innerHeight > 380);
       let cur = "";
       for (const [id] of links) {
         const el = document.getElementById(id);

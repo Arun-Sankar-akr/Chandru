@@ -7,11 +7,11 @@ import { wedding } from "../config.js";
 export default function Venue() {
   const wide = useWide();
   return (
-    <section id="venue">
+    <section id="venue tilt">
       <Reveal variant="zoom">
         <p className="lbl">Where we say “I do”</p>
         <h2>Our Venue</h2>
-        <div className="venue">
+        <div className="venue tilt">
           <img src={wide ? wideImg : portrait} alt="Temple gopuram by the sea" />
         </div>
         <p className="sub" style={{ marginTop: 16 }}>

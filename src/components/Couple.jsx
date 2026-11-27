@@ -7,7 +7,7 @@ function Person({ img, name, role, line, variant }) {
   return (
     <Reveal variant={variant}>
       <article className="person">
-        <div className="person-img">
+        <div className="person-img tilt">
           <img src={img} alt={name} loading="lazy" />
         </div>
         <p className="lbl">{role}</p>

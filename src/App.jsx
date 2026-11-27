@@ -13,9 +13,12 @@ import Countdown from "./components/Countdown.jsx";
 import Share from "./components/Share.jsx";
 import Footer from "./components/Footer.jsx";
 import Done from "./components/Done.jsx";
+import { startMotion, enableGyro } from "./motion.js";
 
 export default function App() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => startMotion(), []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "" : "hidden";
@@ -24,7 +27,7 @@ export default function App() {
 
   return (
     <>
-      <Splash open={open} onOpen={() => setOpen(true)} />
+      <Splash open={open} onOpen={() => { enableGyro(); setOpen(true); }} />
       <Nav open={open} />
       <Hero open={open} />
       <Blessing />
