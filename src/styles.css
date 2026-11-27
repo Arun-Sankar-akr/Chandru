@@ -323,8 +323,8 @@ section {
 /* hero: fullscreen bride | groom */
 .hero {
     position: relative;
-    height: 100svh;
-    min-height: 600px;
+    height: min(100svh, 620px);
+    min-height: 520px;
     overflow: hidden;
     isolation: isolate;
     background: var(--bg)
@@ -332,29 +332,27 @@ section {
 
 .hero-scene {
     position: absolute;
-    inset: 0;
-    perspective: 1200px
+    inset: 0
 }
 
 .hero-stage {
     position: absolute;
     inset: 0;
-    transform-style: preserve-3d;
-    transform: rotateX(calc(var(--my) * -2.2deg)) rotateY(calc(var(--mx) * 3deg))
+    transform: none
 }
 
 .hero-bg {
     position: absolute;
     inset: 0;
     display: flex;
-    transform: translate3d(calc(var(--mx) * -16px), calc(var(--my) * -12px), -100px) scale(1.2)
+    transform: none
 }
 
 .half {
     width: 50%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 6%;
+    object-position: 50% 8%;
     display: block
 }
 
@@ -383,7 +381,7 @@ section {
 .veil {
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, rgba(255, 250, 242, .98) 0, rgba(255, 250, 242, .92) 24%, rgba(255, 250, 242, .4) 46%, transparent 64%), radial-gradient(120% 50% at 50% 0, rgba(255, 255, 255, .4), transparent 70%)
+    background: linear-gradient(0deg, rgba(255, 250, 242, .98) 0, rgba(255, 250, 242, .92) 30%, rgba(255, 250, 242, .45) 44%, transparent 56%), radial-gradient(120% 50% at 50% 0, rgba(255, 255, 255, .4), transparent 70%)
 }
 
 .hero-in {
@@ -391,15 +389,21 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 0 20px calc(26px + env(safe-area-inset-bottom, 0px));
-    transform: translate3d(calc(var(--mx) * 8px), calc(var(--my) * 6px), 70px)
+    padding: 0 16px calc(14px + env(safe-area-inset-bottom, 0px));
+    transform: none
+}
+
+.hero .lbl {
+    font-size: 9px;
+    letter-spacing: .22em;
+    margin: 0 0 6px
 }
 
 .hero h1 {
     font-family: var(--script);
-    font-size: clamp(54px, 15vw, 76px);
+    font-size: clamp(38px, 11vw, 52px);
     color: var(--rose);
-    line-height: 1.02;
+    line-height: .95;
     text-shadow: 0 2px 18px rgba(255, 255, 255, .9)
 }
 
@@ -408,26 +412,34 @@ section {
 }
 
 .hero .amp {
-    font-size: .55em;
+    font-size: .5em;
+    line-height: .8;
     color: var(--gold)
 }
 
 .hero .ta {
-    font-size: 17px
+    font-size: 13px;
+    margin: 0 0 4px
+}
+
+.hero .orn {
+    margin: 6px auto;
+    max-width: 200px
 }
 
 .hero .date {
     font-family: var(--ui);
     font-weight: 600;
-    font-size: 18px;
-    letter-spacing: .18em;
+    font-size: 14px;
+    letter-spacing: .16em;
     color: var(--ink)
 }
 
 .hero .sub {
-    font-size: 15px;
+    font-size: 12.5px;
+    line-height: 1.4;
     max-width: 30ch;
-    margin: 6px auto 0
+    margin: 4px auto 0
 }
 
 .hz {
@@ -475,8 +487,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
-    margin: 16px auto 0;
+    gap: 4px;
+    margin: 8px auto 0;
     text-decoration: none;
     color: var(--gold);
     font-size: 10px;
@@ -489,7 +501,7 @@ section {
 .cue i {
     display: block;
     width: 1px;
-    height: 28px;
+    height: 16px;
     background: linear-gradient(var(--gold), transparent);
     transform-origin: top;
     animation: cue 2s ease-in-out infinite
@@ -522,7 +534,7 @@ section {
     margin-left: calc(var(--r) * -.8);
     transform-style: preserve-3d;
     opacity: 0;
-    transform: translate3d(calc(var(--mx) * -24px), calc(var(--my) * -16px), 130px) rotateY(calc(var(--mx) * 30deg)) rotateX(calc(var(--my) * -20deg))
+    transform: none
 }
 
 .hero.go .rings {
@@ -568,14 +580,12 @@ section {
 .pl-wrap {
     position: absolute;
     inset: 0;
-    pointer-events: none;
-    transform-style: preserve-3d
+    pointer-events: none
 }
 
 .pl {
     position: absolute;
-    inset: 0;
-    transform: translate3d(calc(var(--mx) * var(--dp) * 1px), calc(var(--my) * var(--dp) * .6px), var(--dz))
+    inset: 0
 }
 
 .petal {
@@ -1183,8 +1193,13 @@ section {
         padding: 110px 32px
     }
 
+    .hero {
+        height: min(100svh, 700px);
+        min-height: 560px
+    }
+
     .hero h1 {
-        font-size: clamp(90px, 9vw, 140px)
+        font-size: clamp(64px, 6vw, 92px)
     }
 
     .hero h1 span {
@@ -1196,16 +1211,20 @@ section {
     }
 
     .hero .ta {
-        font-size: 20px
+        font-size: 17px
     }
 
     .hero .date {
-        font-size: 22px
+        font-size: 18px
     }
 
     .hero .sub {
-        font-size: 19px;
+        font-size: 16px;
         max-width: none
+    }
+
+    .hero .lbl {
+        font-size: 11px
     }
 
     .half {
@@ -1213,12 +1232,11 @@ section {
     }
 
     .rings {
-        --r: 84px;
-        top: 15%
+        display: none
     }
 
     .hero-in {
-        padding-bottom: 36px
+        padding-bottom: 22px
     }
 
     .splash {
