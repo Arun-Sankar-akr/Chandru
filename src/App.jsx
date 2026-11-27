@@ -14,6 +14,7 @@ import Share from "./components/Share.jsx";
 import Footer from "./components/Footer.jsx";
 import Done from "./components/Done.jsx";
 import { startMotion, enableGyro } from "./motion.js";
+import Whishes from "./components/Wishes.jsx"
 
 export default function App() {
   const [open, setOpen] = useState(false);
@@ -37,6 +38,7 @@ export default function App() {
       <SaveTheDate />
       <Countdown />
       <Venue />
+      <Whishes/>
       <Gallery />
       <Share />
       <Footer />
