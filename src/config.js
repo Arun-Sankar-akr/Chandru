@@ -12,7 +12,7 @@ export const wedding = {
   time: "Time to be announced",
   groomParents: ["Sivalingam", "Anitha"],
   // TODO: replace with the real names of the bride's parents
-  brideParents: ["Father Name", "Mother Name"],
+  brideParents: ["Balakrishnan", "Selvi"],
   // Day-wise programme. Add or remove items; leave `time` empty to show "To be announced".
   events: [
     { ta: "முகூர்த்தம்", name: "Muhurtham", note: "The sacred wedding ceremony", time: "" },
